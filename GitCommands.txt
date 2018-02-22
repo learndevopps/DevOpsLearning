@@ -1,0 +1,140 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\akhaware>d:
+
+D:\>cd D:\DevOpsLearning\Git
+
+D:\DevOpsLearning\Git>echo "# DevOpsLearning" >> README.md
+
+D:\DevOpsLearning\Git>git init
+Initialized empty Git repository in D:/DevOpsLearning/Git/.git/
+
+D:\DevOpsLearning\Git>git add README.md
+
+D:\DevOpsLearning\Git>git delete
+git: 'delete' is not a git command. See 'git --help'.
+
+D:\DevOpsLearning\Git>git -help
+Unknown option: -help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+D:\DevOpsLearning\Git>git clone https://github.com/learndevopps/DevOpsLearning.g
+it
+Cloning into 'DevOpsLearning'...
+warning: You appear to have cloned an empty repository.
+
+D:\DevOpsLearning\Git>echo "# DevOpsLearning" >> README.md
+
+D:\DevOpsLearning\Git>git init
+Reinitialized existing Git repository in D:/DevOpsLearning/Git/.git/
+
+D:\DevOpsLearning\Git>git add README.md
+
+D:\DevOpsLearning\Git>git commit -m "first commit"
+[master (root-commit) 756c9da] first commit
+ Committer: Amol Khaware <Amol.Khaware@elliemae.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+D:\DevOpsLearning\Git>git remote add origin https://github.com/learndevopps/DevO
+psLearning.git
+
+D:\DevOpsLearning\Git>git push -u origin master
+remote: Permission to learndevopps/DevOpsLearning.git denied to amolqk.
+fatal: unable to access 'https://github.com/learndevopps/DevOpsLearning.git/': T
+he requested URL returned error: 403
+
+D:\DevOpsLearning\Git>git config --global user.name "amol khawre"
+
+D:\DevOpsLearning\Git>git config --global user.email devopsxoriant@gmail.com
+
+D:\DevOpsLearning\Git>git push -u origin master
+remote: Permission to learndevopps/DevOpsLearning.git denied to amolqk.
+fatal: unable to access 'https://github.com/learndevopps/DevOpsLearning.git/': T
+he requested URL returned error: 403
+
+D:\DevOpsLearning\Git>git commit --amend --reset-author
+[master 2c9f297] first commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+D:\DevOpsLearning\Git>git commit --amend --reset-author "changed user"
+error: pathspec 'changed user' did not match any file(s) known to git.
+
+D:\DevOpsLearning\Git>git commit "changed user" --amend --reset-author
+error: pathspec 'changed user' did not match any file(s) known to git.
+
+D:\DevOpsLearning\Git>git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOpsLearning\Git>git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 238 bytes | 79.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/learndevopps/DevOpsLearning.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\DevOpsLearning\Git>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+D:\DevOpsLearning\Git>git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/learndevopps/DevOpsLearning
+   2c9f297..b5f7a2b  master     -> origin/master
+Updating 2c9f297..b5f7a2b
+Fast-forward
+ DemoFile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 DemoFile.txt
+
+D:\DevOpsLearning\Git>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+D:\DevOpsLearning\Git>git add .
+
+D:\DevOpsLearning\Git>git commit "changedFileonLocal"
+error: pathspec 'changedFileonLocal' did not match any file(s) known to git.
+
+D:\DevOpsLearning\Git>git commit -m "changedFileonLocal"
+[master 6035cef] changedFileonLocal
+ 1 file changed, 1 insertion(+)
+
+D:\DevOpsLearning\Git>git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 106.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/learndevopps/DevOpsLearning.git
+   b5f7a2b..6035cef  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\DevOpsLearning\Git>
